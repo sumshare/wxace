@@ -4,6 +4,7 @@
     "description": "JS-SDK middle server",
     "main": "index.js",
     "scripts": {
+        "dev": "cross-env NODE_ENV=development node index.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
@@ -29,5 +30,8 @@
     "bugs": {
         "url": "https://github.com/sumshare/wxace/issues"
     },
-    "homepage": "https://github.com/sumshare/wxace#readme"
+    "homepage": "https://github.com/sumshare/wxace#readme",
+    "devDependencies": {
+        "cross-env": "^5.2.0"
+    }
 }
