@@ -1,6 +1,6 @@
 # wxace
 
-微信JS-SDK配置中控服务器，通过内存缓存access_token和ticket，支持跨域访问。
+基于koa2的微信JS-SDK配置中控服务器，通过内存缓存access_token和ticket，支持跨域访问。
 
 
 ### 配置流程
