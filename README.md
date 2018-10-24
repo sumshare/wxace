@@ -1,16 +1,14 @@
 # wxace
 
-微信JS-JDK配置中控服务器，通过内存缓存access_token和ticket，支持跨域访问。
+微信JS-SDK配置中控服务器，通过内存缓存access_token和ticket，支持跨域访问。
 
 
 ### 配置流程
-1. 
-```
+1. ```
 git clone https://github.com/sumshare/wxace.git
 
 ```
-2.
-```
+2. ```
 npm i
 ```
 3. 配置config文件，端口号与公众号
