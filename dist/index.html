@@ -31,11 +31,11 @@
 	// });
 	$.ajax({
     // url: '/wxace/wxace/getsignature' // 
-    url: '/test' // 此处url请求地址需要替换成你自己实际项目中服务器数字签名服务地址
+    url: '/getSignature' // 此处url请求地址需要替换成你自己实际项目中服务器数字签名服务地址
         ,
     type: 'post',
     data: {
-    	code: 'hb',
+    	code: 'dev',
         url: location.href.split('#')[0] // 将当前URL地址上传至服务器用于产生数字签名
     },
     success:function(r) {
