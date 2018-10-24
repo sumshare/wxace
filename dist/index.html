@@ -7,51 +7,36 @@
 </head>
 <body>wx</body>
 <script type="text/javascript">
-	$.ajax({
-    url: '/api/getSignature' // 此处url请求地址需要替换成你自己实际项目中服务器数字签名服务地址
-        ,
+$.ajax({
+    url: '/api/getSignature',
     type: 'post',
     data: {
-    	code: 'dev',
-        url: location.href.split('#')[0] // 将当前URL地址上传至服务器用于产生数字签名
+	   code: 'dev',
+       url: location.href.split('#')[0] 
     },
     success:function(r) {
-    // 返回了数字签名对象
-    r= r.data;
-    console.log(r);
-    console.log(r.appId);
-    console.log(r.timestamp);
-    console.log(r.nonceStr);
-    console.log(r.signature);
-
-    // 开始配置微信JS-SDK
-    wx.config({
-        debug: false,
-        appId: r.appId,
-        timestamp: r.timestamp,
-        nonceStr: r.nonceStr,
-        signature: r.signature,
-        jsApiList: [
-            'checkJsApi',
-            'onMenuShareTimeline',//分享给好友
-            'onMenuShareAppMessage'//分享到朋友圈
-        ]
-    });
-
-    // 调用微信API
-    wx.ready(function() {
-        
-
-        
-    });
-    wx.error(function(res) {
-    	console.log('失败了')
-        alert(res.errMsg);
-    });
-}
+        // 返回了数字签名对象
+        r= r.data;
+        // 开始配置微信JS-SDK
+        wx.config({
+            debug: false,
+            appId: r.appId,
+            timestamp: r.timestamp,
+            nonceStr: r.nonceStr,
+            signature: r.signature,
+            jsApiList: [
+                'checkJsApi',
+                'onMenuShareTimeline',//分享给好友
+                'onMenuShareAppMessage'//分享到朋友圈
+            ]
+        });
+        // 调用微信API
+        wx.ready(function() { 
+        });
+        wx.error(function(res) {
+            alert(res.errMsg);
+        });
+    }
 })
-
-
-
 </script>
 </html>

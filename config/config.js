@@ -5,7 +5,7 @@ const CONF = {
     wx: [{
         code: 'dev',
         appId: 'wxc91b62feab11b585',
-        appSecret: 'd499047d2a39311ae6dddf74241949c4'
+        appSecret: 'your appSecret'
     }]
 }
 module.exports = CONF
