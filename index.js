@@ -16,7 +16,6 @@ app.use(cors());
 // 设置静态服务器
 app.use(serve(path.resolve('dist')));
 app.use(response)
-console.log(process.env.NODE_ENV)
 // 解析请求体
 app.use(bodyParser({
     enableTypes: ['json', 'form', 'text']
