@@ -4,11 +4,13 @@
 
 
 ### 配置流程
-1. ```
+1. 
+```
 git clone https://github.com/sumshare/wxace.git
 
 ```
-2. ```
+2.
+```
 npm i
 ```
 3. 配置config文件，端口号与公众号
